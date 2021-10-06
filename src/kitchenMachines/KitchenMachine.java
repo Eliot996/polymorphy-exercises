@@ -12,11 +12,15 @@ public abstract class KitchenMachine {
     }
 
     public void switchOn(){
-        isOn = true;
+        if (!isOn){
+            isOn = true;
+        }
     }
 
     public void switchOff(){
-        isOn = false;
+        if (isOn){
+            isOn = false;
+        }
     }
 
     @Override
