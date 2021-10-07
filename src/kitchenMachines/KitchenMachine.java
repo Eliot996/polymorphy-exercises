@@ -2,10 +2,10 @@ package kitchenMachines;
 
 public abstract class KitchenMachine {
     protected String brand;
-    protected String color;
+    protected Color color;
     protected boolean isOn;
 
-    public KitchenMachine(String brand, String color){
+    public KitchenMachine(String brand, Color color){
         this.brand = brand;
         this.color = color;
         this.isOn = false;

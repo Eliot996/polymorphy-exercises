@@ -4,7 +4,7 @@ public class MicrowaveOven extends KitchenMachine{
     int wattage;
     int powerLevel;
 
-    public MicrowaveOven(String brand, String color, int wattage, int powerLevel){
+    public MicrowaveOven(String brand, Color color, int wattage, int powerLevel){
         super(brand, color);
         this.wattage = wattage;
         this.powerLevel = powerLevel;

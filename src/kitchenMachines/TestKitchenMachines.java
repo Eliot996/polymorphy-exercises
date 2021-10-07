@@ -7,15 +7,23 @@ public class TestKitchenMachines {
 
     public static void main(String[] args) {
         // make a microwave
-        MicrowaveOven microwaveOven = new MicrowaveOven("Siemens", "brown", 1000, 1);
+        MicrowaveOven microwaveOven = null;
+        String input = "Yellow";
+        try {
+            microwaveOven = new MicrowaveOven("Siemens", Color.valueOf(input.toUpperCase()), 1000, 1);
+        } catch (IllegalArgumentException e){
+            System.out.println("Ugyldigt farve valg");
+        }
         // make a coffemaker
-        CoffeMaker coffeMaker = new CoffeMaker("Black & Decker", "blue", 1, LocalTime.of(13,0));
+        CoffeMaker coffeMaker = new CoffeMaker("Black & Decker", Color.BLUE, 1, LocalTime.of(13,0));
 
         // make arrayList of kitchenMachines
         ArrayList<KitchenMachine> kitchenMachines = new ArrayList<>();
 
         // add the machines to the arraylist
-        kitchenMachines.add(microwaveOven);
+        if (microwaveOven != null){
+            kitchenMachines.add(microwaveOven);
+        }
         kitchenMachines.add(coffeMaker);
 
         //prints all the machines in the array
